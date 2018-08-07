@@ -1,0 +1,384 @@
+@import url('http://fonts.googleapis.com/css?family=Changa:400,700&subset=latin-ext');
+:root {
+    --main-transition: .3s;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Changa', sans-serif;
+}
+
+body {
+    background-color: #000;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+}
+
+h1,
+h2 {
+    font-size: 4rem;
+    color: #B24B3B;
+}
+
+p,
+span {
+    color: #DDFF87;
+}
+
+/* header */
+
+header {
+    height: 95vh;
+    background-color: #555;
+    background-image: url("http://cdn.pixabay.com/photo/2017/10/10/16/55/halloween-2837936_960_720.png");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 7rem;
+    text-align: center;
+    line-height: 95vh;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    perspective-origin: 90%;
+    transition: 1.5s;
+}
+
+header h1:hover {
+    transform: rotateX(360deg) scale3d(1.1, 1.1, 1.1);
+}
+
+header:hover h1 span {
+    display: inline-block;
+    animation: letterAnim 6s ease-in-out 1.5s infinite;
+    transform-origin: center;
+}
+
+header h1 span {
+    color: #4375CC;
+}
+
+/* end--header */
+
+/* nav */
+
+nav {
+    height: 10vh;
+    background-color: #000;
+    position: relative;
+}
+
+nav ul {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    list-style-type: none;
+    transform: translate(-50%);
+}
+
+nav ul li {
+    text-align: center;
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    background-color: #275AB2;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    font-size: 2.5rem;
+    color: #000;
+    border-radius: 50%;
+    transition: var(--main-transition);
+}
+
+nav ul li a:hover {
+    box-shadow: 0 0 0px 3px #000, 0 0 20px 0 rgb(194, 194, 0);
+}
+
+/* end-nav */
+
+/* section 1 */
+
+.section1 div,
+.section1 aside {
+    float: left;
+    width: 50%;
+    overflow: hidden;
+    height: 50vh;
+}
+
+.section1 div {
+    background-image: url("http://cdn.pixabay.com/photo/2015/05/10/21/16/board-761586_960_720.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.section1 aside {
+    background-color: #275AB2;
+}
+
+.section1 aside p,
+.section1 aside h2 {
+    transition: .3s;
+}
+
+.section1 aside p:hover,
+.section1 aside h2:hover {
+    filter: drop-shadow(30px 10px 4px black);
+}
+
+.section1 aside h2 {
+    text-align: center;
+    padding: 30px;
+    border-bottom: 2px solid rgba(0, 0, 0, .3);
+}
+
+.section1 aside p {
+    height: 20%;
+    text-align: center;
+    font-size: 1.4rem;
+    padding:10px;
+    border-bottom: 2px solid rgba(0, 0, 0, .3);
+}
+
+.section1 aside p:last-of-type {
+    border-bottom: none;
+}
+
+/* end-section 1 */
+
+/* section 2 */
+
+.section2 {margin-top:50px;
+    position: relative;
+    font-size: 0;
+    min-height: 40vh;
+}
+
+.section2 div,
+.section2 article {
+    position: absolute;
+    width: 50%;
+    text-align: center;
+    height: 40vh;
+    line-height: 40vh;
+    font-size: 1.6rem;
+    transition: var(--main-transition);
+}
+
+.section2 div {
+    left: 0;
+    top: 0;
+}
+
+.section2 article {
+    right: 0;
+    top: 0;
+}
+
+.section2:hover div {
+    left: 50%;
+    background-color: #275AB2;
+}
+
+.section2:hover article {
+    right: 50%;
+    background-color: #275AB2;
+}
+
+/* end-section 2 */
+
+/* section 3 */
+
+.section3 {
+    height: 90vh;
+    max-width: 1280px;
+    position: relative;
+    margin: 10vh auto;
+    border: 5px solid #DDFF87;
+    border-radius: 10px;
+    box-shadow: inset 0 0 40px 1px rgba(255, 255, 255, 0.9), 0 0 40px 1px rgba(255, 255, 255, 0.9);
+}
+
+.section3 div {
+    position: absolute;
+    height: 100%;
+    line-height: 50vh;
+    font-size: 1rem;
+    left: 0;
+    top: 0;
+    transition: var(--main-transition);
+    background-size: cover;
+    background-position: center;
+}
+
+.section3 div span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 25%;
+    width: 100%;
+    text-align: right;
+    padding: 20px 20px 0 0;
+    line-height: 25%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #DDFF87;
+}
+
+.section3 div:nth-child(1) {
+    width: 100%;
+    background-image: url("http://cdn.pixabay.com/photo/2018/07/31/22/08/lion-3576045_960_720.jpg");
+}
+
+.section3 div:nth-child(2) {
+    width: 80%;
+    background-image: url("http://cdn.pixabay.com/photo/2018/08/03/23/36/cat-3582978_960_720.jpg");
+}
+
+.section3 div:nth-child(3) {
+    width: 60%;
+    background-image: url("http://cdn.pixabay.com/photo/2018/08/04/08/43/blue-tit-3583332_960_720.jpg");
+}
+
+.section3 div:nth-child(4) {
+    width: 40%;
+    background-image: url("http://cdn.pixabay.com/photo/2018/08/02/14/45/sunflower-3579650_960_720.jpg");
+}
+
+.section3 div:nth-child(5) {
+    width: 20%;
+    background-image: url("http://cdn.pixabay.com/photo/2018/07/21/17/53/cat-3553106_960_720.jpg");
+}
+
+.section3 div:nth-child(1):hover+div:nth-child(2) {
+    width: 60%;
+}
+
+.section3 div:nth-child(2):hover+div:nth-child(3) {
+    width: 40%;
+}
+
+.section3 div:nth-child(3):hover+div:nth-child(4) {
+    width: 20%;
+}
+
+.section3 div:nth-child(4):hover+div:nth-child(5) {
+    width: 0%;
+}
+
+.section3 div:hover span {
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+}
+
+.section3 div:nth-child(5):hover {
+    width: 90%;
+}
+
+/* end-section 3 */
+
+/* footer */
+
+footer {
+    padding: 5px;
+    height: 5vh;
+    background-color: #275AB2;
+    color: #DDFF87;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+/* end-footer */
+
+/* mq */
+
+@media(max-width: 1385px) {
+    .section1 div,
+    .section1 aside {
+        float: left;
+        width: 100%;
+        overflow: hidden;
+        height: 70vh;
+    }
+}
+
+@media(max-width: 708px) {
+    header h1 {
+        font-size: 3rem;
+        
+    }
+
+    
+    nav ul li {
+        width:35px;
+        height: 35px;
+        margin: 0 5px;
+    }
+    nav ul li a{
+        line-height: 35px;
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 460px) {
+     header h1 {
+         font-size: 2rem;
+     }
+    
+    nav ul li {
+        width: 28px;
+        height: 28px;
+        margin: 0 2px;
+    }
+    nav ul li a {
+        line-height: 28px;
+        font-size: 1.4rem;
+    }
+}
+
+
+@keyframes letterAnim {
+    0% {
+        filter: drop-shadow(0 0px 120px black);
+        color: yellow;
+    }
+    25% {
+        filter: drop-shadow(70px 70px 4px black);
+        color: white;
+    }
+    50% {
+        filter: drop-shadow(0 0px 120px black);
+        color: yellow;
+    }
+    75% {
+        filter: drop-shadow(-70px -70px 4px black);
+        color: black;
+    }
+    100% {
+        filter: drop-shadow(0 0px 120px black);
+        color: yellow;
+    }
+}
